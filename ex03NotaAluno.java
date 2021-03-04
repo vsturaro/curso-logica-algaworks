@@ -10,6 +10,8 @@ para imprimir, no console, uma mensagem que vai dizer se o aluno passou ou não 
  */
 public class ex03NotaAluno {
 
+    static final Integer NOTA_MINIMA_APROVACAO = 70; // criando constante para média
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -18,7 +20,7 @@ public class ex03NotaAluno {
         System.out.print("Digite a nota do aluno: ");
         Integer notaAluno = scanner.nextInt();
 
-        Boolean aprovado = notaAluno >=70;
+       Boolean aprovado = notaAluno >= NOTA_MINIMA_APROVACAO; //comparando a constante criada se atende à condicao
 
         if(aprovado){
             System.out.println("Parabéns, o aluno está aprovado, com a média final de "+notaAluno);
