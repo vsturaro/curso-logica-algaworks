@@ -29,5 +29,6 @@ public class ex08EstruturasDecisao02 {
         else {
             System.out.println("A empresa não atingiu a meta de faturamento mínima, não haverá bonificação.");
         }
+        scanner.close();
     }
 }
