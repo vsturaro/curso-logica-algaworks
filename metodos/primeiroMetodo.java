@@ -14,7 +14,7 @@ public class primeiroMetodo {
 
             String[] cursos = new String[] {"Java EE", "Spring", "Java OO Avançado"};
 
-            imprimir("Escolha dentre os cursos abaixo: ");
+            imprimirOpcaoConsole("Escolha dentre os cursos abaixo: ");
 
             /* for(int i = 0; i < cursos.length; i++) {
                 System.out.println("[" + i + "] " + cursos[i]);
@@ -22,7 +22,7 @@ public class primeiroMetodo {
 
             iterarExibirPosicoes(cursos);
 
-            imprimir("O curso que você deseja é o: ");
+            imprimirOpcaoConsole("O curso que você deseja é o: ");
             Integer posicaoCursoEscolhido = scanner.nextInt();
 
             posicaoValida = posicaoCursoEscolhido >= 0 && posicaoCursoEscolhido < cursos.length;
@@ -83,7 +83,7 @@ public class primeiroMetodo {
 
         static void validarOpcao(){ //cria o metodo para validar a opção digitada
             if(!posicaoValida) {
-                imprimir("Posição inválida!");
+                System.err.println("Posição inválida!");
                 System.exit(0);
             }
         }
