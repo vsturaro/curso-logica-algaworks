@@ -10,15 +10,12 @@ public class ex04CalculadoraRecursividade {
         imprimirTabuadaMultiplicacao(numeroDigitado(scanner),0);
         linha();
 
-        //imprimir("Tabuada de divisão do número: "+numeroDigitadoDivisao(scanner));
         imprimirTabuadaDivisao(numeroDigitadoDivisao(scanner), 1.0);
         linha();
 
-        //imprimir("Tabuada de soma do número: "+numeroDigitado(scanner));
         imprimirTabuadaSoma(numeroDigitado(scanner), 0);
         linha();
 
-        //imprimir("Tabuada de subtração do número: "+numeroDigitado(scanner));
         imprimirTabuadaSubtracao(numeroDigitado(scanner),0);
         linha();
 
