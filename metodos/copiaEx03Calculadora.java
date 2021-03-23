@@ -35,6 +35,9 @@ public class copiaEx03Calculadora {
         else if(codigoOperacao == 3){
             nomeOperacao = "Multiplicação";
         }
+        else if(codigoOperacao == 4){
+            nomeOperacao = "Exponenciação";
+        }
         return nomeOperacao;
     }
 
@@ -48,6 +51,8 @@ public class copiaEx03Calculadora {
           case 2: resultado = divisao(primeiroNumero, segundoNumero);
           break;
           case 3: resultado = multiplicacao(primeiroNumero, segundoNumero);
+          break;
+          case 4: resultado = exponenciacao(primeiroNumero, segundoNumero);
           break;
           default:
           System.err.println("Digite uma das opções válidas!");
@@ -88,11 +93,14 @@ public class copiaEx03Calculadora {
     static Double multiplicacao(Double primeiroNumero, Double segundoNumero){ //cria o método para multiplicar
         return primeiroNumero * segundoNumero; //retorna o produto
     }
+    static Double exponenciacao(Double primeiroNumero, Double segundoNumero){ //cria o método para exponencial
+        return StrictMath.pow(primeiroNumero, segundoNumero);// primeiroNumero sqrt segundoNumero; //retorna o produto
+    }
 
     static Integer informaOperacao(Scanner scanner){
         imprimirTextoConsole("Digite a operação desejada: \n");
 
-        String[] operacoesDisponiveis = new String[]{"Soma","Subtração","Divisão","Multiplicação"}; //cria o array com as opções disponíveis
+        String[] operacoesDisponiveis = new String[]{"Soma","Subtração","Divisão","Multiplicação", "Exponenciação"}; //cria o array com as opções disponíveis
         for(int i =0; i < operacoesDisponiveis.length; i++){ //percorre o array ate a ultima posição
             imprimir("( "+i+" )"+operacoesDisponiveis[i]);
         }
